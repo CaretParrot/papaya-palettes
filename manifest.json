@@ -1,7 +1,7 @@
 {
-    "name": "<name>",
-    "short_name": "<name>",
-    "start_url": "/<name>",
+    "name": "Papaya Palletes",
+    "short_name": "PaPa",
+    "start_url": "/papaya-palletes",
     "icons": [
         {
             "src": "https://caretparrot.github.io/papaya-salad/Profile%20Picture.png",
