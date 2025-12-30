@@ -9,13 +9,23 @@
         <link rel="manifest" href="./manifest.json">
         <link rel="stylesheet" href="./default.css">
         <script defer src="https://caretparrot.github.io/papaya-salad/script.js"></script>
-        <script defer src="./script.js"></script>
+        <script src="./script.js"></script>
         <title>Papaya Palettes</title>
     </head>
 
     <body>
         <h1>Hello World!</h1>
         <p>I'm a little paragraph</p>
+        <button>I'm a little button</button>
+
+        <script>
+            let p = new Palette();
+            p.hue = 0;
+            p.accentHue = 20;
+            p.saturation = 0.1;
+            p.primaryLightness = [1, 0.2];
+            p.secondaryLightness = [0.9, 0.3];
+        </script>
     </body>
 
 </html>
