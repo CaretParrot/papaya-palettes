@@ -132,31 +132,10 @@ button {
     background-color: var(--accent-element);
 }
 
-.two-column {
-    grid: auto / 1fr 1fr;
-}
-
-.three-column {
-    grid: auto / 1fr 1fr 1fr;
-}
-
-.four-column {
-    grid: auto / 1fr 1fr 1fr 1fr;
-}
-
 .flex {
     display: flex;
 }
 
 .grid {
     display: grid;
-}
-
-@media (orientation: portrait) {
-
-    .two-column,
-    .three-column,
-    .four-column {
-        grid: auto / 1fr;
-    }
 }
