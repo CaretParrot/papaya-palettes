@@ -5,15 +5,14 @@
     --hue: 270;
     --accent-hue: 300;
     --saturation: 10%;
-    --light: 100%;
+    --light: 90%;
     --dark: 20%;
-    --light-element: 90%;
+    --light-element: 80%;
     --dark-element: 30%;
     --background: light-dark(oklch(var(--light) var(--saturation) var(--hue)), oklch(var(--dark) var(--saturation) var(--hue)));
     --element: light-dark(oklch(var(--light-element) var(--saturation) var(--hue)), oklch(var(--dark-element) var(--saturation) var(--hue)));
     --accent-element: light-dark(oklch(var(--light-element) var(--saturation) var(--accent-hue)), oklch(var(--dark-element) var(--saturation) var(--accent-hue)));
     --text: light-dark(oklch(var(--dark-element) 0 var(--hue)), oklch(var(--light-element) 0 var(--hue)));
-    --accent-text: light-dark(oklch(var(--dark-element) 0 var(--accent-hue)), oklch(var(--light-element) 0 var(--accent-hue)));
     --base-unit: 1rem;
 }
 
@@ -103,7 +102,6 @@ h4,
 h5,
 h6 {
     font-family: "DM Sans", "Verdana", sans-serif;
-    font-weight: 500;
 }
 
 button,
@@ -138,4 +136,28 @@ button {
 
 .grid {
     display: grid;
+}
+
+.accent {
+    background-color: var(--accent-element);
+}
+
+.alt {
+    background-color: var(--text);
+    color: var(--element);
+}
+
+.default {
+    background-color: var(--element);
+    color: var(--text);
+}
+
+.default::selection {
+    color: var(--text);
+    background-color: var(--element);
+}
+
+.default::-moz-selection {
+    color: var(--text);
+    background-color: var(--element);
 }

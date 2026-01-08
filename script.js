@@ -1,94 +1,95 @@
-class Palette {
-    #hue = 280;
-    #accentHue = 300;
-    #saturation = 0.1;
-    #primaryLightness = [1, 0.2];
-    #secondaryLightness = [0.9, 0.3];
-    #colorUnit = "oklch";
+class SimplePallete {
+    /**
+     * @type {number | Array<number>}
+     */
+    #hues;
+    #sat;
+    #bLight;
+    #eLight;
+    #colorUnit;
+
+    constructor() {
+        this.#hues = 270;
+        this.#sat = 0.1;
+        this.#bLight = [1, 0.2];
+        this.#eLight = [0.9, 0.3];
+        this.#colorUnit = "oklch";
+        this.update();
+    }
 
     update() {
         document.documentElement.style.setProperty("color-scheme", "light dark");
-        document.documentElement.style.setProperty("--hue", this.#hue.toString());
-        document.documentElement.style.setProperty("--accent-hue", this.#accentHue.toString());
-        document.documentElement.style.setProperty("--saturation", this.toPercentage(this.#saturation));
-        document.documentElement.style.setProperty("--light", this.toPercentage(this.#primaryLightness[0]));
-        document.documentElement.style.setProperty("--dark", this.toPercentage(this.primaryLightness[1]));
-        document.documentElement.style.setProperty("--light-element", this.toPercentage(this.#secondaryLightness[0]));
-        document.documentElement.style.setProperty("--dark-element", this.toPercentage(this.#secondaryLightness[1]));
+        if (typeof this.#hues === "object") {
+            document.documentElement.style.setProperty("--hue", this.#hues[0].toString());
+            document.documentElement.style.setProperty("--accent-hue", this.#hues[1].toString());
+        } else {
+            document.documentElement.style.setProperty("--hue", this.#hues.toString());
+            document.documentElement.style.setProperty("--accent-hue", (this.#hues + 30).toString());
+        }
+        document.documentElement.style.setProperty("--saturation", this.toPercentage(this.#sat));
+        document.documentElement.style.setProperty("--light", this.toPercentage(this.#bLight[0]));
+        document.documentElement.style.setProperty("--dark", this.toPercentage(this.#bLight[1]));
+        document.documentElement.style.setProperty("--light-element", this.toPercentage(this.#eLight[0]));
+        document.documentElement.style.setProperty("--dark-element", this.toPercentage(this.#eLight[1]));
     }
 
     /**
-     * @returns {number}
+     * @returns {number | Array<number>}
      */
-    get hue() {
-        return this.#hue;
+    get hues() {
+        return this.#hues;
     }
 
     /**
-     * @param {number} hue
+     * @param {number | Array<number>} hues
      */
-    set hue(hue) {
-        this.#hue = hue;
+    set hues(hues) {
+        this.#hues = hues;
         this.update();
     }
 
     /**
      * @returns {number}
      */
-    get accentHue() {
-        return this.#accentHue;
+    get sat() {
+        return this.#sat;
     }
 
     /**
-     * @param {number} hue
+     * @param {number} sat
      */
-    set accentHue(hue) {
-        this.#accentHue = hue;
-        this.update();
-    }
-
-    /**
-     * @returns {number}
-     */
-    get saturation() {
-        return this.#saturation;
-    }
-
-    /**
-     * @param {number} saturation
-     */
-    set saturation(saturation) {
-        this.#saturation = saturation;
+    set sat(sat) {
+        this.#sat = sat;
         this.update();
     }
 
     /**
      * @returns {number[]}
      */
-    get primaryLightness() {
-        return this.#primaryLightness;
+    get bLight() {
+        return this.#bLight;
     }
 
     /**
-     * @param {number[]} primaryLightness
+     * @param {number[]} bLight
      */
-    set primaryLightness(primaryLightness) {
-        this.#primaryLightness = primaryLightness;
+    set bLight(bLight) {
+        this.#bLight = bLight;
         this.update();
     }
 
     /**
      * @returns {number[]}
      */
-    get secondaryLightness() {
-        return this.#secondaryLightness;
+    get eLight() {
+        return this.#eLight;
     }
 
     /**
-     * @param {number[]} secondaryLightness
+     * @param {number[]} eLight
      */
-    set secondaryLightness(secondaryLightness) {
-        this.#secondaryLightness = secondaryLightness;
+    set eLight(eLight) {
+        this.#eLight = eLight;
         this.update();
     }
 
@@ -114,5 +115,20 @@ class Palette {
         }
 
         return decimal * 100 + "%";
+    }
+}
+
+class SuperPallete {
+    #styles;
+
+    /**
+     * @param {*} styles 
+     */
+    constructor(styles) {
+        this.#styles = styles;
+    }
+
+    update() {
+        document.documentElement.style.setProperty("color-scheme", "light dark");
     }
 }
