@@ -56,6 +56,10 @@ body * {
     box-shadow: 0 0 calc(var(--base-unit) / 8) calc(var(--base-unit) / 8) oklch(0 0 0 / 50%);
 }
 
+div * {
+    box-shadow: none;
+}
+
 * {
     box-sizing: border-box;
 }
