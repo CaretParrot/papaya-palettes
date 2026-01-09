@@ -5,22 +5,26 @@
     --hue: 270;
     --accent-hue: 300;
     --saturation: 10%;
-    --light: 90%;
+    --light: 80%;
+    --light-element: 90%;
     --dark: 20%;
-    --light-element: 80%;
     --dark-element: 30%;
     --background: light-dark(oklch(var(--light) var(--saturation) var(--hue)), oklch(var(--dark) var(--saturation) var(--hue)));
     --element: light-dark(oklch(var(--light-element) var(--saturation) var(--hue)), oklch(var(--dark-element) var(--saturation) var(--hue)));
     --accent-element: light-dark(oklch(var(--light-element) var(--saturation) var(--accent-hue)), oklch(var(--dark-element) var(--saturation) var(--accent-hue)));
-    --text: light-dark(oklch(var(--dark-element) 0 var(--hue)), oklch(var(--light-element) 0 var(--hue)));
+    --text: light-dark(oklch(var(--dark-element) var(--saturation) var(--hue)), oklch(var(--light-element) var(--saturation) var(--hue)));
     --base-unit: 1rem;
 }
 
-.active,
-button:active,
-select:active,
-input:focus {
+input:focus,
+button:hover,
+input:hover {
+    box-shadow: 0 0 calc(var(--base-unit) / 2) calc(var(--base-unit) / 2) oklch(0 0 0 / 50%);
+}
+
+button:active {
     background-color: transparent;
+    box-shadow: none;
 }
 
 body * {
@@ -37,7 +41,7 @@ body * {
     border-radius: var(--base-unit);
     padding: var(--base-unit);
     font-size: var(--base-unit);
-    transition: 0.5s;
+    transition: 0.3s;
     flex: 1 1 auto;
     text-align: center;
     line-height: 1.5em;
@@ -49,6 +53,7 @@ body * {
     -webkit-tap-highlight-color: transparent;
     grid: auto / 1fr;
     flex-flow: row wrap;
+    box-shadow: 0 0 calc(var(--base-unit) / 8) calc(var(--base-unit) / 8) oklch(0 0 0 / 50%);
 }
 
 * {
@@ -76,8 +81,8 @@ html {
 
 body {
     background-color: transparent;
-    margin: 0;
-    width: 100%;
+    margin: auto;
+    width: 80%;
     display: grid;
     padding: var(--base-unit);
     grid-gap: var(--base-unit);
@@ -160,4 +165,10 @@ button {
 .default::-moz-selection {
     color: var(--text);
     background-color: var(--element);
+}
+
+@media (orientation: portrait) {
+    body {
+        width: 100%;
+    }
 }
