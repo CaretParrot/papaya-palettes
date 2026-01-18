@@ -2,17 +2,17 @@
 
 :root {
     color-scheme: light dark;
-    --hue: 270;
-    --accent-hue: 300;
+    --hue: 240;
+    --accent-hue: 270;
     --saturation: 10%;
     --light: 80%;
     --light-element: 90%;
-    --dark: 20%;
-    --dark-element: 30%;
-    --background: light-dark(oklch(var(--light) var(--saturation) var(--hue)), oklch(var(--dark) var(--saturation) var(--hue)));
-    --element: light-dark(oklch(var(--light-element) var(--saturation) var(--hue)), oklch(var(--dark-element) var(--saturation) var(--hue)));
-    --accent-element: light-dark(oklch(var(--light-element) var(--saturation) var(--accent-hue)), oklch(var(--dark-element) var(--saturation) var(--accent-hue)));
-    --text: light-dark(oklch(var(--dark-element) var(--saturation) var(--hue)), oklch(var(--light-element) var(--saturation) var(--hue)));
+    --dark: 10%;
+    --dark-element: 20%;
+    --background: light-dark(hsl(var(--hue), var(--saturation), var(--light)), hsl(var(--hue), var(--saturation), var(--dark)));
+    --element: light-dark(hsl(var(--hue), var(--saturation), var(--light-element)), hsl(var(--hue), var(--saturation), var(--dark-element)));
+    --accent-element: light-dark(hsl(var(--accent-hue), var(--saturation), var(--light-element)), hsl(var(--accent-hue), var(--saturation), var(--dark-element)));
+    --text: light-dark(hsl(var(--accent-hue), var(--saturation), var(--dark-element)), hsl(var(--accent-hue), var(--saturation), var(--light-element)));
     --base-unit: 1rem;
 }
 
