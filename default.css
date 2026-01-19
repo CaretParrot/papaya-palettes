@@ -37,7 +37,7 @@ body * {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    border: none;
+    border: calc(var(--base-unit) / 4) solid hsla(0, 0%, 0%, 1);
     border-radius: var(--base-unit);
     padding: var(--base-unit);
     font-size: var(--base-unit);
@@ -53,11 +53,7 @@ body * {
     -webkit-tap-highlight-color: transparent;
     grid: auto / 1fr;
     flex-flow: row wrap;
-    box-shadow: 0 0 calc(var(--base-unit) / 8) calc(var(--base-unit) / 8) oklch(0 0 0 / 50%);
-}
-
-div * {
-    box-shadow: none;
+    
 }
 
 * {
