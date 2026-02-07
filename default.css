@@ -133,6 +133,12 @@ button {
     background-color: var(--accent-element);
 }
 
+span,
+p *,
+a * {
+    border: none;
+}
+
 .flex {
     display: flex;
 }
