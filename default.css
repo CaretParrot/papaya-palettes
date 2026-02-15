@@ -9,10 +9,14 @@
     --light-element: 90%;
     --dark: 10%;
     --dark-element: 20%;
+    --light-container: 85%;
+    --dark-container: 15%;
     --background: light-dark(hsl(var(--hue), var(--saturation), var(--light)), hsl(var(--hue), var(--saturation), var(--dark)));
     --element: light-dark(hsl(var(--hue), var(--saturation), var(--light-element)), hsl(var(--hue), var(--saturation), var(--dark-element)));
     --accent-element: light-dark(hsl(var(--accent-hue), var(--saturation), var(--light-element)), hsl(var(--accent-hue), var(--saturation), var(--dark-element)));
     --text: light-dark(hsl(var(--accent-hue), var(--saturation), var(--dark-element)), hsl(var(--accent-hue), var(--saturation), var(--light-element)));
+    --container: light-dark(hsl(var(--hue), var(--saturation), var(--light-container)), hsl(var(--hue), var(--saturation), var(--dark-container)));
+    --accent-container: light-dark(hsl(var(--accent-hue), var(--saturation), var(--light-container)), hsl(var(--accent-hue), var(--saturation), var(--dark-container)));
     --base-unit: 1rem;
 }
 
@@ -122,9 +126,9 @@ input {
 div {
     display: grid;
     margin: 0;
+    background-color: var(--container);
     grid-gap: var(--base-unit);
 }
-
 
 input,
 select,
