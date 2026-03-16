@@ -137,6 +137,14 @@ button {
     background-color: var(--accent-element);
 }
 
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: bold;
+}
+
 span,
 p *,
 a * {
