@@ -1,6 +1,6 @@
 class SimplePallete {
     /**
-     * @type {number | Array<number>}
+     * @type {number | number[]}
      */
     #hues;
     #sat;
@@ -13,7 +13,7 @@ class SimplePallete {
         this.#sat = 0.1;
         this.#bLight = [1, 0.2];
         this.#eLight = [0.9, 0.3];
-        this.#colorUnit = "oklch";
+        this.#colorUnit = "hsl";
         this.update();
     }
 
@@ -115,20 +115,5 @@ class SimplePallete {
         }
 
         return decimal * 100 + "%";
-    }
-}
-
-class SuperPallete {
-    #styles;
-
-    /**
-     * @param {*} styles 
-     */
-    constructor(styles) {
-        this.#styles = styles;
-    }
-
-    update() {
-        document.documentElement.style.setProperty("color-scheme", "light dark");
     }
 }

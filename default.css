@@ -123,7 +123,7 @@ input {
     font-weight: 700;
 }
 
-div {
+div, nav-bar {
     display: grid;
     margin: 0;
     background-color: var(--container);
@@ -133,7 +133,6 @@ div {
 input,
 select,
 button {
-    color: var(--text-accent);
     background-color: var(--accent-element);
 }
 
@@ -159,13 +158,12 @@ a * {
     display: grid;
 }
 
-.accent {
-    background-color: var(--accent-element);
+div.accent {
+    background-color: var(--accent-container);
 }
 
-.alt {
-    background-color: var(--text);
-    color: var(--element);
+.accent {
+    background-color: var(--accent-element);
 }
 
 .default {
