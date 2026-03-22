@@ -110,6 +110,7 @@ h3,
 h4,
 h5,
 h6 {
+    font-weight: 700;
     font-family: "DM Sans", "Verdana", sans-serif;
 }
 
@@ -124,7 +125,8 @@ input {
     font-weight: 700;
 }
 
-div, nav-bar {
+div,
+nav-bar {
     display: grid;
     margin: 0;
     background-color: var(--container);
