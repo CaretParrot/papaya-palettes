@@ -90,8 +90,8 @@ body {
     display: grid;
     padding: var(--base-unit);
     grid-gap: var(--base-unit);
-    opacity: 1;
-    animation: 0.3s ease-in 0s 1 fade-in;
+    opacity: 0;
+    animation: 0.3s ease-in 0s 1 fade-in forwards;
 }
 
 h1 {
@@ -220,20 +220,12 @@ div.accent {
 }
 
 @keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-
     100% {
         opacity: 1;
     }
 }
 
 @keyframes fade-out {
-    0% {
-        opacity: 1;
-    }
-
     100% {
         opacity: 0;
     }
