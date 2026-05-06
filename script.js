@@ -8,6 +8,10 @@ class SimplePallete {
     #eLight;
     #colorUnit;
 
+    /*
+     * Sets the default values for the default color palette.
+     */
+
     constructor() {
         this.#hues = 270;
         this.#sat = 0.1;

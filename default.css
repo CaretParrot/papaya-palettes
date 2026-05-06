@@ -94,7 +94,8 @@ body {
     animation: 0.3s ease-in 0s 1 fade-in forwards;
 }
 
-h1 {
+h1,
+summary {
     font-size: 2.5rem;
 }
 
@@ -111,7 +112,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+summary {
     font-weight: 700;
     font-family: "DM Sans", "Verdana", sans-serif;
 }
@@ -128,7 +130,8 @@ input {
 }
 
 div,
-nav-bar {
+nav-bar,
+details {
     display: grid;
     margin: 0;
     background-color: var(--container);
@@ -163,7 +166,7 @@ a * {
     display: grid;
 }
 
-div.accent {
+div.accent, details.accent {
     background-color: var(--accent-container);
 }
 
