@@ -155,6 +155,7 @@ strong {
 span,
 p *,
 a * {
+    padding: 0;
     border: none;
 }
 
@@ -187,6 +188,12 @@ div.accent, details.accent {
 .default::-moz-selection {
     color: var(--text);
     background-color: var(--element);
+}
+
+footer {
+    background-color: transparent;
+    border: none;
+    padding: 0;
 }
 
 @media (orientation: portrait) {
