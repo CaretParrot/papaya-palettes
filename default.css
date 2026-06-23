@@ -12,9 +12,9 @@
     --light-element: 90%;
 
     --dark-saturation: 10%;
-    --dark-background: 20%;
-    --dark-container: 25%;
-    --dark-element: 30%;
+    --dark-background: 10%;
+    --dark-container: 15%;
+    --dark-element: 20%;
 
     --background: light-dark(hsl(var(--hue), var(--light-saturation), var(--light-background)), hsl(var(--hue), var(--dark-saturation), var(--dark-background)));
     --element: light-dark(hsl(var(--hue), var(--light-saturation), var(--light-element)), hsl(var(--hue), var(--dark-saturation), var(--dark-element)));
