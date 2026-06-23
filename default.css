@@ -2,21 +2,26 @@
 
 :root {
     color-scheme: light dark;
+
     --hue: 240;
     --accent-hue: 270;
-    --saturation: 10%;
+
+    --light-saturation: 40%;
     --light-background: 80%;
-    --light-element: 90%;
-    --dark-background: 10%;
-    --dark-element: 20%;
     --light-container: 85%;
-    --dark-container: 15%;
-    --background: light-dark(hsl(var(--hue), var(--saturation), var(--light-background)), hsl(var(--hue), var(--saturation), var(--dark-background)));
-    --element: light-dark(hsl(var(--hue), var(--saturation), var(--light-element)), hsl(var(--hue), var(--saturation), var(--dark-element)));
-    --accent-element: light-dark(hsl(var(--accent-hue), var(--saturation), var(--light-element)), hsl(var(--accent-hue), var(--saturation), var(--dark-element)));
-    --text: light-dark(hsl(0, 0%, var(--dark-background)), hsl(0, 0%, var(--light-background)));
-    --container: light-dark(hsl(var(--hue), var(--saturation), var(--light-container)), hsl(var(--hue), var(--saturation), var(--dark-container)));
-    --accent-container: light-dark(hsl(var(--accent-hue), var(--saturation), var(--light-container)), hsl(var(--accent-hue), var(--saturation), var(--dark-container)));
+    --light-element: 90%;
+
+    --dark-saturation: 10%;
+    --dark-background: 20%;
+    --dark-container: 25%;
+    --dark-element: 30%;
+
+    --background: light-dark(hsl(var(--hue), var(--light-saturation), var(--light-background)), hsl(var(--hue), var(--dark-saturation), var(--dark-background)));
+    --element: light-dark(hsl(var(--hue), var(--light-saturation), var(--light-element)), hsl(var(--hue), var(--dark-saturation), var(--dark-element)));
+    --accent-element: light-dark(hsl(var(--accent-hue), var(--light-saturation), var(--light-element)), hsl(var(--accent-hue), var(--dark-saturation), var(--dark-element)));
+    --text: light-dark(hsl(0, 0%, 10%), hsl(0, 0%, 90%));
+    --container: light-dark(hsl(var(--hue), var(--light-saturation), var(--light-container)), hsl(var(--hue), var(--dark-saturation), var(--dark-container)));
+    --accent-container: light-dark(hsl(var(--accent-hue), var(--light-saturation), var(--light-container)), hsl(var(--accent-hue), var(--dark-saturation), var(--dark-container)));
     --base-unit: 1rem;
 }
 
