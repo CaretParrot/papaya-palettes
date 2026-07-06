@@ -201,6 +201,16 @@ footer {
     padding: 0;
 }
 
+dialog {
+    background-color: transparent;
+    border: none;
+    margin: auto;
+}
+
+dialog::backdrop {
+    backdrop-filter: blur(calc(var(--base-unit)));
+}
+
 @media (orientation: portrait) {
     body {
         width: 100%;
