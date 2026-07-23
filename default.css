@@ -211,6 +211,17 @@ dialog::backdrop {
     backdrop-filter: blur(calc(var(--base-unit)));
 }
 
+li {
+    border: none;
+    padding: 0;
+    margin-left: var(--base-unit);
+    text-align: left;
+}
+
+ul>li::marker {
+    content: " - ";
+}
+
 @media (orientation: portrait) {
     body {
         width: 100%;
