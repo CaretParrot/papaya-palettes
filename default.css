@@ -23,12 +23,15 @@
     --container: light-dark(hsl(var(--hue), var(--light-saturation), var(--light-container)), hsl(var(--hue), var(--dark-saturation), var(--dark-container)));
     --accent-container: light-dark(hsl(var(--accent-hue), var(--light-saturation), var(--light-container)), hsl(var(--accent-hue), var(--dark-saturation), var(--dark-container)));
     --base-unit: 1rem;
+
+    --border: calc(var(--base-unit) / 4) solid hsla(0, 0%, 0%, 1);
+    --shadow: 0 0 calc(var(--base-unit) / 2) calc(var(--base-unit) / 2) oklch(0 0 0 / 50%);
 }
 
 input:focus,
 button:hover,
 input:hover {
-    box-shadow: 0 0 calc(var(--base-unit) / 2) calc(var(--base-unit) / 2) oklch(0 0 0 / 50%);
+    box-shadow: var(--shadow);
 }
 
 button:active {
@@ -47,7 +50,7 @@ body * {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    border: calc(var(--base-unit) / 4) solid hsla(0, 0%, 0%, 1);
+    border: var(--border);
     border-radius: var(--base-unit);
     padding: var(--base-unit);
     font-size: var(--base-unit);
