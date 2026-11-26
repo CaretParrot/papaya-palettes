@@ -1,118 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
     color-scheme: light dark;
-
-    --hue: 240;
-    --accent-hue: 270;
-
-    --light-saturation: 40%;
-    --light-background: 80%;
-    --light-container: 85%;
-    --light-element: 90%;
-
-    --dark-saturation: 10%;
-    --dark-background: 10%;
-    --dark-container: 15%;
-    --dark-element: 20%;
-
-    --background: light-dark(hsl(var(--hue), var(--light-saturation), var(--light-background)), hsl(var(--hue), var(--dark-saturation), var(--dark-background)));
-    --element: light-dark(hsl(var(--hue), var(--light-saturation), var(--light-element)), hsl(var(--hue), var(--dark-saturation), var(--dark-element)));
-    --accent-element: light-dark(hsl(var(--accent-hue), var(--light-saturation), var(--light-element)), hsl(var(--accent-hue), var(--dark-saturation), var(--dark-element)));
-    --text: light-dark(hsl(0, 0%, 10%), hsl(0, 0%, 90%));
-    --container: light-dark(hsl(var(--hue), var(--light-saturation), var(--light-container)), hsl(var(--hue), var(--dark-saturation), var(--dark-container)));
-    --accent-container: light-dark(hsl(var(--accent-hue), var(--light-saturation), var(--light-container)), hsl(var(--accent-hue), var(--dark-saturation), var(--dark-container)));
     --base-unit: 1rem;
 
-    --border: calc(var(--base-unit) / 4) solid hsla(0, 0%, 0%, 1);
-    --shadow: 0 0 calc(var(--base-unit) / 2) calc(var(--base-unit) / 2) oklch(0 0 0 / 50%);
-}
+    --teal: 210;
+    --blue: 240;
+    --purple: 270;
 
-input:focus,
-button:hover,
-input:hover {
-    box-shadow: var(--shadow);
-}
+    --white: hsl(0, 0%, 90%);
+    --black: hsl(0, 0%, 10%);
 
-button:active {
-    background-color: transparent;
-    box-shadow: none;
-}
+    --saturation: 20%;
 
-body * {
-    color: var(--text);
-    background-color: var(--element);
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    font-family: "Inter", "Verdana", sans-serif;
-    font-display: swap;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    border: var(--border);
-    border-radius: var(--base-unit);
-    padding: var(--base-unit);
-    font-size: var(--base-unit);
-    transition: 0.3s;
-    flex: 1 1 auto;
-    text-align: center;
-    line-height: 1.5em;
-    margin: 0;
-    outline: none;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    text-decoration: none;
-    -webkit-tap-highlight-color: transparent;
-    grid: auto / 1fr;
-    flex-flow: row wrap;
+    --bright-1: 15%;
+    --bright-2: 25%;
+    --bright-3: 35%;
+    --bright-4: 50%;
+    --bright-5: 65%;
+    --bright-6: 75%;
+    --bright-7: 85%;
+
+    --blue-1: hsl(var(--blue), var(--saturation), var(--bright-1));
+    --blue-2: hsl(var(--blue), var(--saturation), var(--bright-2));
+    --blue-3: hsl(var(--blue), var(--saturation), var(--bright-3));
+    --blue-4: hsl(var(--blue), var(--saturation), var(--bright-4));
+    --blue-5: hsl(var(--blue), var(--saturation), var(--bright-5));
+    --blue-6: hsl(var(--blue), var(--saturation), var(--bright-6));
+    --blue-7: hsl(var(--blue), var(--saturation), var(--bright-7));
+
+    --teal-1: hsl(var(--teal), var(--saturation), var(--bright-1));
+    --teal-2: hsl(var(--teal), var(--saturation), var(--bright-2));
+    --teal-3: hsl(var(--teal), var(--saturation), var(--bright-3));
+    --teal-4: hsl(var(--teal), var(--saturation), var(--bright-4));
+    --teal-5: hsl(var(--teal), var(--saturation), var(--bright-5));
+    --blue-6: hsl(var(--teal), var(--saturation), var(--bright-6));
+    --blue-7: hsl(var(--teal), var(--saturation), var(--bright-7));
+
+    --purple-1: hsl(var(--purple), var(--saturation), var(--bright-1));
+    --purple-2: hsl(var(--purple), var(--saturation), var(--bright-2));
+    --purple-3: hsl(var(--purple), var(--saturation), var(--bright-3));
+    --purple-4: hsl(var(--purple), var(--saturation), var(--bright-4));
+    --purple-5: hsl(var(--purple), var(--saturation), var(--bright-5));
+    --purple-6: hsl(var(--purple), var(--saturation), var(--bright-6));
+    --purple-7: hsl(var(--purple), var(--saturation), var(--bright-7));
+
+    --background: light-dark(var(--blue-7), var(--blue-1));
+    --element: light-dark(var(--blue-6), var(--blue-2));
+    --container: light-dark(var(--blue-6), var(--blue-2));
+    --element-container: light-dark(var(--blue-7), var(--blue-1));
+    --text: light-dark(var(--black), var(--white));
+
+    --border-size: calc(var(--base-unit) / 4);
 }
 
 * {
     box-sizing: border-box;
 }
 
-::selection {
-    color: var(--element);
-    background-color: var(--text);
-}
-
-::-moz-selection {
-    color: var(--element);
-    background-color: var(--text);
-}
-
-html {
-    margin: 0;
-    padding: 0;
-    background-color: var(--background);
-    width: 100%;
-    height: 100%;
-    font-size: 100%;
-}
-
 body {
-    background-color: transparent;
-    margin: auto;
-    width: 80%;
     display: grid;
+    grid: auto / 1fr;
+    gap: var(--base-unit);
+    width: 80%;
+
     padding: var(--base-unit);
-    grid-gap: var(--base-unit);
-    opacity: 0;
-    animation: 0.3s ease-in 0s 1 fade-in forwards;
+    margin: 0 auto;
+
+    background-color: var(--background);
+    color: var(--text);
 }
 
-h1,
-summary {
-    font-size: 2.5rem;
-}
+body * {
+    margin: 0;
+    border-radius: var(--base-unit);
 
-h2 {
-    font-size: 2rem;
-}
-
-h3 {
-    font-size: 1.5rem;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 h1,
@@ -120,152 +87,51 @@ h2,
 h3,
 h4,
 h5,
-h6,
-summary {
+h6 {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
     font-weight: 700;
-    font-family: "DM Sans", "Verdana", sans-serif;
+    font-style: normal;
 }
 
-button,
-select,
-option {
+div {
+    padding: var(--base-unit);
+    border-radius: var(--base-unit);
+
+    display: grid;
+    grid: auto / 1fr;
+    gap: var(--base-unit);
+
+    background-color: var(--container);
+}
+
+button {
+    font-size: 0.75rem;
+    background-color: var(--element);
+    border: inherit;
+    border-radius: var(--base-unit);
+    padding: var(--base-unit);
+
     cursor: pointer;
 }
 
-a,
-input {
-    font-weight: 700;
-}
-
-div,
-nav-bar,
-details {
-    display: grid;
+slot {
     margin: 0;
-    background-color: var(--container);
-    grid-gap: var(--base-unit);
-}
-
-input,
-select,
-button {
-    background-color: var(--accent-element);
-}
-
-em {
-    font-style: italic;
-}
-
-strong {
-    font-weight: bold;
-}
-
-span,
-p *,
-a * {
-    padding: 0;
-    border: none;
-}
-
-.flex {
-    display: flex;
-}
-
-.grid {
-    display: grid;
-}
-
-div.accent, details.accent {
-    background-color: var(--accent-container);
-}
-
-.accent {
-    background-color: var(--accent-element);
-}
-
-.default {
-    background-color: var(--element);
-    color: var(--text);
-}
-
-.default::selection {
-    color: var(--text);
-    background-color: var(--element);
-}
-
-.default::-moz-selection {
-    color: var(--text);
-    background-color: var(--element);
-}
-
-footer {
-    background-color: transparent;
-    border: none;
     padding: 0;
 }
 
-dialog {
-    background-color: transparent;
-    border: none;
-    margin: auto;
-}
-
-dialog::backdrop {
-    backdrop-filter: blur(calc(var(--base-unit)));
-}
-
-li {
-    border: none;
+strong,
+em, 
+span {
     padding: 0;
-    margin-left: var(--base-unit);
-    text-align: left;
-}
-
-ul>li::marker {
-    content: " - ";
+    font-size: inherit;
+    font-weight: inherit;
+    border: none;
 }
 
 @media (orientation: portrait) {
     body {
         width: 100%;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation: none !important;
-        transition: none !important;
-    }
-}
-
-@keyframes slide-from-left {
-    from {
-        transform: translateX(-100%);
-    }
-
-    to {
-        transform: translateX(0);
-    }
-}
-
-@keyframes slide-from-right {
-    from {
-        transform: translateX(-100%);
-    }
-
-    to {
-        transform: translateX(0);
-    }
-}
-
-@keyframes fade-in {
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fade-out {
-    100% {
-        opacity: 0;
+        padding: var(--base-unit);
     }
 }
